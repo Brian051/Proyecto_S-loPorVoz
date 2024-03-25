@@ -42,6 +42,7 @@ navigator.mediaDevices
       // Verificar si el texto normalizado incluye alguna de las palabras clave
       if (textoNormalizado.includes("ver lista")) {
         console.log("Te he escuchado");
+        visualizacion();
 
         const token =
           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6WyJhZG1pbiIsIkN1c3RvbU9iamVjdENhbkJlQWRkZWRIZXJlIl0sIm5iZiI6MTcxMTM1OTk4NiwiZXhwIjoxNzExOTY0Nzg2LCJpYXQiOjE3MTEzNTk5ODZ9.7DL7B5eudtcZANhgXVexHDOqE4yzj1ijozpbkVXfyqc";
@@ -57,7 +58,7 @@ navigator.mediaDevices
         })
           .then((res) => res.json())
           .then((res) => {
-            visualizacion();
+            
             console.log(res);
           })
           .catch((error) => console.error(error));
