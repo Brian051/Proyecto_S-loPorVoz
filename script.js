@@ -107,8 +107,7 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   AFRAME.registerComponent("details-listener", {
     init: function () {
-      var el = this.el;
-      el.addEventListener("click", function (evt) {
+      var el = this.el; 
         console.log("Clic detectado en Ver Detalles.");
         var newCircle = document.createElement("a-circle");
         newCircle.setAttribute("radius", "0.25");
@@ -149,7 +148,7 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
         }
 
         el.parentNode.appendChild(newCircle);
-      });
+      
     },
   });
 
