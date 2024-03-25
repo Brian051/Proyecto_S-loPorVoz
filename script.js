@@ -152,11 +152,11 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
     },
   });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    var detailsBox = document.querySelector("#details-box");
-    if (detailsBox) {
-      detailsBox.setAttribute("details-listener", "");
-    }
-  });
+//   document.addEventListener("DOMContentLoaded", function () {
+//     var detailsBox = document.querySelector("#details-box");
+//     if (detailsBox) {
+//       detailsBox.setAttribute("details-listener", "");
+//     }
+//   });
 }
 
