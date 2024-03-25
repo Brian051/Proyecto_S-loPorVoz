@@ -87,6 +87,7 @@ navigator.mediaDevices
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 
+function visualizacion() {
 var canvas = document.getElementById("gradient");
 var ctx = canvas.getContext("2d");
 
@@ -103,7 +104,7 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 //CLIC Y ANIMACIONES
 
-function visualizacion() {
+
   AFRAME.registerComponent("details-listener", {
     init: function () {
       var el = this.el;
@@ -159,5 +160,4 @@ function visualizacion() {
     }
   });
 }
-
 
