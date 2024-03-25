@@ -39,7 +39,7 @@ function voz() {
 
         // Verificar si el texto normalizado incluye alguna de las palabras clave
         if (
-          textoNormalizado.includes("apagado")
+          textoNormalizado.includes("ver detalles")
           ) {
             console.log("Te he escuchado");
           
@@ -160,3 +160,4 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 })
 }
+
