@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AR Message</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="script.js" defer></script> <!-- Script externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="gradient" style="display: none;"></canvas>
+
+    <div id="container">
+        <a-scene embedded arjs="sourceType: webcam;">
+            <a-marker type="pattern" url="https://raw.githubusercontent.com/MiguelEiz/patt/main/prueba2.patt">
+                <a-plane position="0 0 0" rotation="-90 0 0" width="1.5" height="1.5" material="color: white; opacity: 0.9;">
+                    <a-text id="virusText" value="Virus-T" align="center" width="4" position="0 0.5 0.05" color="black"></a-text>
+                    <a-text value="Biological Danger" align="center" width="3" position="0 0 0.05" color="black"></a-text>
+                    <a-entity position="0 -0.5 0.08">
+                        <a-box id="details-box" width="1.5" height="0.5" depth="0.02" material="color: blue;"></a-box>
+                        <a-text id="details-text" value="Ver Detalles" align="center" width="2" position="0 0 0.05" color="white"></a-text>
+                    </a-entity>
+                    <!-- Botón -->
+                </a-plane>
+            </a-marker>
+            <a-entity camera cursor="rayOrigin: mouse;"></a-entity> <!-- Añadir el componente cursor a la cámara -->
+        </a-scene>
+    </div>
+</body>
+</html>
+
+
+
