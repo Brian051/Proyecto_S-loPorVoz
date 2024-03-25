@@ -40,7 +40,7 @@ navigator.mediaDevices
         .replace(/[^\w\s]/gi, "");
 
       // Verificar si el texto normalizado incluye alguna de las palabras clave
-      if (textoNormalizado.includes("apagado")) {
+      if (textoNormalizado.includes("ver lista")) {
         console.log("Te he escuchado");
 
         const token =
