@@ -48,7 +48,7 @@ function startVoiceRecognition() {
               .then((res) => res.json())
               .then((res) => {
                 console.log(res);
-                visualizacion(res);
+                visualizacion(res, marker); // Pasar el marcador como parámetro
               })
               .catch((error) => console.error(error));
           } else if (textoNormalizado.includes("ocultar detalles")) {
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-function visualizacion(objeto) {
+function visualizacion(objeto, marker) {
   var newCircle = document.createElement("a-circle");
   newCircle.setAttribute("id", "new-circle");
   newCircle.setAttribute("radius", "0.25");
@@ -129,5 +129,6 @@ function visualizacion(objeto) {
     newCircle.appendChild(sphere);
   }
 
-  el.parentNode.appendChild(newCircle);
+  // Agregar el nuevo círculo al marcador
+  marker.appendChild(newCircle);
 }
