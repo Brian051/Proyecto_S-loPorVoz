@@ -27,12 +27,6 @@ function startVoiceRecognition() {
         recognition.onstart = function () {
           console.log("El reconocimiento de voz ha comenzado");
         };
-        recognition.onend = function () {
-          console.log(
-            "El reconocimiento de voz ha terminado. Reiniciando..."
-          );
-          recognition.start();
-        };
         recognition.onresult = function (event) {
           const transcript = event.results[0][0].transcript;
           console.log("Texto reconocido:", transcript);
@@ -90,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
         marker.addEventListener("markerFound", startVoiceRecognition);
     }
 });
+
 
 function visualizacion(objeto) {
   var newCircle = document.createElement("a-circle");
