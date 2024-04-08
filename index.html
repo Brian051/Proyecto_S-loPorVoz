@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>AR Message</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
-
-    <canvas id="gradient" style="display: none;"></canvas>df
-
+    <canvas id="gradient" style="display: none;"></canvas>
+</div>
     <div id="container">
-        <a-scene embedded arjs="sourceType: webcam;">
-            <a-marker id="my-marker" type="pattern" url="https://raw.githubusercontent.com/MiguelEiz/patt/main/CodigoBrian.patt" >
-                <a-plane position="0 0 0" rotation="-90 0 0" width="1" height="1"
-                    material="src: url(https://www.shutterstock.com/shutterstock/photos/1654819510/display_1500/stock-photo-pink-rabies-virus-microscopic-cells-with-pink-background-d-illustration-1654819510.jpg);">
-                    <a-text id="virusText" value="Rabia" align="center" width="6" position="0 0.5 0.7"
-                        color="black" font="https://cdn.aframe.io/fonts/Roboto-msdf.json" wrap-count="50" opacity="0.8"></a-text>
-                    <a-text value="Biological Danger" align="center" width="3" position="0 0 0.7" color="red" font="https://cdn.aframe.io/fonts/Roboto-msdf.json" wrap-count="30" opacity="0.8"></a-text>
-                    <a-plane id="details-box" width="1" height="0.2" position="0 -0.6 0"
-                        material="color: green;"></a-box>
-                        <a-text id="details-button" value="Habla para interactuar" align="center" width="2"
-                            position="0 0 0.02" color="white"></a-text>
+        <a-scene embedded arjs="sourceType: webcam;" vr-mode-ui="enabled: false" >
+            <a-marker type="pattern" url="https://raw.githubusercontent.com/MiguelEiz/patt/main/prueba2.patt" id="virus-marker" >
+                <a-plane position="0 0 0" rotation="-90 0 0" width="1" height="1" color = "white">
+                    <a-image src="https://raw.githubusercontent.com/saioamurillo/proyecto-final/main/mic.png" width="0.12" height="0.12" position="0 0.45 0.2"></a-image>
+                    <a-text id="ar-transcript" value="Habla para interactuar" align="center" width="2" position="0 0.2 0.2" color="black"></a-text>
+                    <a-text id="virusText" font="exo2bold" value="Comandos de voz:" align="center" width="1.7" position="0 0 0.2" color="black"></a-text>
+                    <a-text id="virusText" value="Detalles Caja" align="center" width="1.4" position="0 -0.2 0.3" color="black"></a-text>
+                    <a-text id="virusText" value="Ocultar Caja" align="center" width="1.4" position="0 -0.3 0.3" color="black"></a-text>
+                    <a-plane id="details-box" width="1" height="0.2" position="0 -0.6 0"></a-box>
                     </a-plane>
+                    <a-image src="https://raw.githubusercontent.com/saioamurillo/proyecto-final/main/arrow.png" width="0.09" height="0.08" position="0 -0.5 0.2"></a-image>
             </a-marker>
-            <a-plane id="qr-plane" position="0 0 0" rotation="-90 0 0" width="1.5" height="1.5"
-                material="color: white; opacity: 0.9;" qr-area></a-plane>
+            <a-marker type="pattern" url="https://raw.githubusercontent.com/MiguelEiz/patt/main/CodigoBrian.patt"  id="adn-marker" >
+                <a-plane position="0 0 0" rotation="-90 0 0" width="1" height="1" color = "white">
+                    <a-image src="https://raw.githubusercontent.com/saioamurillo/proyecto-final/main/mic.png" width="0.12" height="0.12" position="0 0.45 0.2"></a-image>
+                    <a-text id="ar-transcript1" value="Habla para interactuar" align="center" width="2" position="0 0.2 0.2" color="black"></a-text>
+                    <a-text id="virusText" value="Comandos de voz:" align="center" width="1.7" position="0 0 0.2" color="black"></a-text>
+                    <a-text id="virusText" value="Detalles Muestra" align="center" width="1.4" position="0 -0.2 0.3" color="black"></a-text>
+                    <a-text id="virusText" value="Ocultar Muestra" align="center" width="1.4" position="0 -0.3 0.3" color="black"></a-text>
+                    <a-plane id="details-box" width="1" height="0.2" position="0 -0.6 0"></a-box>
+                    </a-plane>
+                    <a-image src="https://raw.githubusercontent.com/saioamurillo/proyecto-final/main/arrow.png" width="0.09" height="0.08" position="0 -0.5 0.2"></a-image>
+            </a-marker>
             <a-entity camera cursor="rayOrigin: mouse;" raycaster="objects: [details-listener]"></a-entity>
-            <div id="detallesvoz">
-
-            </div>
         </a-scene>
     </div>
 </body>
-
 </html>
+
+
+
+
+
