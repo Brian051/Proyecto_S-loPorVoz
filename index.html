@@ -13,16 +13,16 @@
 
 <body>
 
-    <canvas id="gradient" style="display: none;"></canvas>
+    <canvas id="gradient" style="display: none;"></canvas>df
 
     <div id="container">
         <a-scene embedded arjs="sourceType: webcam;">
-            <a-marker type="pattern" url="https://raw.githubusercontent.com/MiguelEiz/patt/main/CodigoBrian.patt" markerfound="startVoiceRecognition">
+            <a-marker id="my-marker" type="pattern" url="https://raw.githubusercontent.com/MiguelEiz/patt/main/CodigoBrian.patt" >
                 <a-plane position="0 0 0" rotation="-90 0 0" width="1" height="1"
-                    material="src: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR553zMFY49H8WWysq669ddG168oC-fQDleqA&usqp=CAU);">
-                    <a-text id="virusText" value="Covid19" align="center" width="6" position="0 0.5 0.7"
-                        color="black"></a-text>
-                    <a-text value="Biological Danger" align="center" width="3" position="0 0 0.7" color="red"></a-text>
+                    material="src: url(https://www.shutterstock.com/shutterstock/photos/1654819510/display_1500/stock-photo-pink-rabies-virus-microscopic-cells-with-pink-background-d-illustration-1654819510.jpg);">
+                    <a-text id="virusText" value="Rabia" align="center" width="6" position="0 0.5 0.7"
+                        color="black" font="https://cdn.aframe.io/fonts/Roboto-msdf.json" wrap-count="50" opacity="0.8"></a-text>
+                    <a-text value="Biological Danger" align="center" width="3" position="0 0 0.7" color="red" font="https://cdn.aframe.io/fonts/Roboto-msdf.json" wrap-count="30" opacity="0.8"></a-text>
                     <a-plane id="details-box" width="1" height="0.2" position="0 -0.6 0"
                         material="color: green;"></a-box>
                         <a-text id="details-button" value="Habla para interactuar" align="center" width="2"
